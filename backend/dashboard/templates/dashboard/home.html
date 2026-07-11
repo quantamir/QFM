@@ -1,0 +1,65 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}
+Dashboard | QFM
+{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4">Dashboard</h2>
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🏥 Assets</h5>
+                <h2>125</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🛠 Work Orders</h5>
+                <h2>18</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">👨‍🔧 Staff</h5>
+                <h2>42</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">📊 Reports</h5>
+                <h2>9</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card mt-5 shadow-sm">
+
+    <div class="card-header">
+        Recent Activity
+    </div>
+
+    <div class="card-body">
+
+        <p>No recent activity yet.</p>
+
+    </div>
+
+</div>
+
+{% endblock %}
