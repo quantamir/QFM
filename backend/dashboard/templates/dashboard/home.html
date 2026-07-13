@@ -11,41 +11,9 @@ Dashboard | QFM
 
 <div class="row g-4">
 
-    <div class="col-md-3">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🏥 تجهیزات</h5>
-                <h2>125</h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🛠 دستور کارها</h5>
-                <h2>18</h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">👨‍🔧 پرسنل</h5>
-                <h2>42</h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">📊 گزارشها</h5>
-                <h2>9</h2>
-            </div>
-        </div>
-    </div>
+    {% for stat in stats %}
+        {% include "dashboard/_stat_card.html" %}
+    {% endfor %}
 
 </div>
 
