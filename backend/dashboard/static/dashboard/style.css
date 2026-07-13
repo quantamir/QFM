@@ -1,6 +1,8 @@
 body {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    font-family: "Vazirmatn", sans-serif;
     background-color: #f0f4f8;
 }
 
