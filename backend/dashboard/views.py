@@ -3,10 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 
 DASHBOARD_STATS = [
-    {"icon": "🏥", "title": "Assets", "value": 125},
-    {"icon": "🛠", "title": "Work Orders", "value": 18},
-    {"icon": "👨‍🔧", "title": "Staff", "value": 42},
-    {"icon": "📊", "title": "Reports", "value": 9},
+    {"icon": "🏥", "title": "تجهیزات", "value": 125},
+    {"icon": "🛠", "title": "دستور کارها", "value": 18},
+    {"icon": "👨‍🔧", "title": "پرسنل", "value": 42},
+    {"icon": "📊", "title": "گزارشها", "value": 9},
 ]
 
 
