@@ -1,0 +1,51 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}
+حذف پرسنل
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow">
+
+    <div class="card-header bg-danger text-white">
+        حذف پرسنل
+    </div>
+
+    <div class="card-body">
+
+        <h4 class="mb-4">
+            آیا از حذف این پرسنل مطمئن هستید؟
+        </h4>
+
+        <h5 class="text-primary">
+
+            {{ object.first_name }}
+            {{ object.last_name }}
+
+        </h5>
+
+        <br>
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <button type="submit" class="btn btn-danger">
+                حذف
+            </button>
+
+            <a href="{% url 'employee_list' %}"
+               class="btn btn-secondary">
+
+                انصراف
+
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

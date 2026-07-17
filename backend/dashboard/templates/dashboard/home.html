@@ -1,66 +1,37 @@
 {% extends "dashboard/base.html" %}
 
 {% block title %}
-Dashboard | QFM
+داشبورد | QFM
 {% endblock %}
 
 {% block content %}
 
-<h2 class="mb-4">داشبورد</h2>
-<h3>خوش آمدید 👋</h3>
+<div class="d-flex justify-content-between align-items-center mb-4">
 
-<div class="row g-4">
+    <div>
+        <h2 class="fw-bold">
+            داشبورد مدیریت خدمات
+        </h2>
 
-    <div class="col-md-3">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🏥 تجهیزات</h5>
-                <h2>125</h2>
-            </div>
-        </div>
+        <p class="text-muted mb-0">
+            مرکز درمانی سوده
+        </p>
     </div>
 
-    <div class="col-md-3">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🛠 دستور کارها</h5>
-                <h2>18</h2>
-            </div>
-        </div>
-    </div>
+    <div>
 
-    <div class="col-md-3">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">👨‍🔧 پرسنل</h5>
-                <h2>42</h2>
-            </div>
-        </div>
-    </div>
+        <span class="badge bg-success fs-6">
+            سیستم فعال
+        </span>
 
-    <div class="col-md-3">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">📊 گزارشها</h5>
-                <h2>9</h2>
-            </div>
-        </div>
     </div>
 
 </div>
 
-<div class="card mt-5 shadow-sm">
+{% include "dashboard/components/stats_cards.html" %}
 
-    <div class="card-header">
-        آخرین فعالیت ها 
-    </div>
+{% include "dashboard/components/quick_access.html" %}
 
-    <div class="card-body">
-
-        <p>سامانه مدیریت خدمات مرکز درمانی سوده</p>
-
-    </div>
-
-</div>
+{% include "dashboard/components/today_status.html" %}
 
 {% endblock %}
