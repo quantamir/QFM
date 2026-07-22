@@ -3,63 +3,511 @@ body {
     direction: rtl;
     text-align: right;
     font-family: "Vazirmatn", sans-serif;
-    background-color: #f0f4f8;
-}
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: -0.2px;
 
-header {
-    background-color: #1a2b4c;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
-    background-color: #263859;
-    padding: 12px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ffd166;
-}
-
-main {
-    padding: 30px;
-}
-
-h3 {
-    color: #1a2b4c;
+    background: #f4f7fb;
+    color: #2c3e50;
 }
 
 /* ===========================
-   Dashboard Cards
+   Navbar
 =========================== */
 
+.navbar {
+    height: 65px;
+}
+
+.navbar-brand {
+    font-size: 23px;
+    font-weight: 750;
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+
+.bg-dark {
+    background: #243447 !important;
+}
+
+.nav-link {
+    border-radius: 10px;
+    padding: 10px 14px;
+    transition: all .25s;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,.12);
+    transform: translateX(-4px);
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,.12);
+}
+
+.card-header {
+    font-size: 16px;
+    font-weight: 750;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn {
+    border-radius: 12px;
+    font-weight: 650;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   Tables
+=========================== */
+
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead {
+    font-weight: 750;
+}
+
+/* ===========================/* ===================================
+   QFM Typography
+=================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:"Vazirmatn",sans-serif;
+
+    color:#243447;
+
+    margin:0;
+
+}
+
+h1{
+
+    font-size:34px;
+
+    font-weight:900;
+
+    line-height:1.3;
+
+}
+
+h2{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    line-height:1.4;
+
+}
+
+h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+h4{
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+h5{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+h6{
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+p{
+
+    font-size:15px;
+
+    color:#6b7280;
+
+    line-height:1.9;
+
+}
+
+/* ===========================
+   Alerts
+=========================== */
+
+.alert{
+    border:none;
+    border-radius:12px;
+    font-weight:500;
+}
+
+/* ===============================
+   QFM Professional UI
+==================================*/
+
+.container-fluid{
+    padding:0;
+}
+
 .card{
+    border:none;
     border-radius:18px;
-    transition:0.25s;
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
+    transition:.25s;
 }
 
 .card:hover{
     transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    box-shadow:0 16px 40px rgba(0,0,0,.10);
 }
 
-.card h2{
+.card-header{
+    background:#fff;
+    border-bottom:1px solid #eef2f6;
     font-weight:700;
-    color:#1f2937;
 }
 
-.card small{
-    font-size:13px;
+.btn{
+    border-radius:12px;
+    font-weight:600;
 }
 
-.card-body{
-    padding:25px;
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.table{
+    border-radius:14px;
+    overflow:hidden;
+}
+
+.table thead{
+    background:#243447;
+    color:white;
+}
+
+.alert{
+    border:none;
+    border-radius:12px;
+}
+
+h2{
+    font-weight:700;
+}
+
+h3{
+    font-weight:600;
+}
+
+/* ===================================
+   QFM Color Theme
+=================================== */
+
+:root{
+
+    --qfm-primary:#1f4e79;
+    --qfm-secondary:#2f6b9a;
+
+    --qfm-success:#2e8b57;
+
+    --qfm-warning:#f4b400;
+
+    --qfm-danger:#d9534f;
+
+    --qfm-info:#2ca8c2;
+
+    --qfm-light:#f4f7fb;
+
+    --qfm-dark:#243447;
+
+}
+
+.bg-primary{
+    background:var(--qfm-primary)!important;
+}
+
+.btn-primary{
+    background:var(--qfm-primary);
+    border:none;
+}
+
+.btn-primary:hover{
+    background:var(--qfm-secondary);
+}
+
+.btn-success{
+    background:var(--qfm-success);
+}
+
+.btn-warning{
+    background:var(--qfm-warning);
+}
+
+.btn-danger{
+    background:var(--qfm-danger);
+}
+
+.btn-info{
+    background:var(--qfm-info);
+}
+
+.btn-dark{
+    background:var(--qfm-dark);
+}
+
+/* ==========================================
+   QFM Design System v1.0
+========================================== */
+
+/* ---------- Page Title ---------- */
+
+.qfm-page-title{
+    font-size:30px;
+    font-weight:800;
+    color:var(--qfm-dark);
+    margin-bottom:6px;
+}
+
+.qfm-page-subtitle{
+    font-size:15px;
+    color:#6b7280;
+}
+
+/* ---------- Cards ---------- */
+
+.qfm-card{
+
+    background:#fff;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+/* ---------- Card Header ---------- */
+
+.qfm-card-header{
+
+    background:linear-gradient(
+        135deg,
+        #1f4e79,
+        #2f6b9a
+    );
+
+    color:white;
+
+    padding:20px 28px;
+
+}
+
+/* ---------- Forms ---------- */
+
+.form-control,
+.form-select{
+
+    height:48px;
+
+    border-radius:12px;
+
+    border:1px solid #d9e2ec;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:var(--qfm-primary);
+
+    box-shadow:0 0 0 4px rgba(31,78,121,.15);
+
+}
+
+/* ---------- Labels ---------- */
+
+.form-label{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+/* ---------- Buttons ---------- */
+
+.qfm-btn{
+
+    height:48px;
+
+    border-radius:12px;
+
+    padding:0 28px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.qfm-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   QFM Professional Forms
+========================================== */
+
+.form-control,
+.form-select {
+
+    height: 48px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d7dde5;
+
+    font-size: 15px;
+
+    transition: .25s;
+
+    box-shadow: none;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#1f4e79;
+
+    box-shadow:0 0 0 .2rem rgba(31,78,121,.15);
+
+}
+
+.form-label{
+
+    font-weight:700;
+
+    color:#243447;
+
+    margin-bottom:8px;
+
+}
+
+.qfm-card{
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+.qfm-card-header{
+
+    background:#1f4e79;
+
+    color:white;
+
+    padding:18px 25px;
+
+}
+
+.qfm-card-header h4{
+
+    color:white;
+
+}
+
+.qfm-page-title{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:#243447;
+
+}
+
+.qfm-page-subtitle{
+
+    font-size:17px;
+
+    color:#6c757d;
+
+}
+
+.btn{
+
+    border-radius:12px;
+
+    font-weight:700;
+
+}
+
+.btn-success{
+
+    background:#198754;
+
+}
+
+.btn-secondary{
+
+    background:#6c757d;
+
 }

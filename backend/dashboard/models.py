@@ -25,8 +25,8 @@ class Employee(models.Model):
     class Department(models.TextChoices):
         SERVICES = "SERVICES", "خدمات"
         SECURITY = "SECURITY", "حراست"
-        LAUNDRY = "LAUNDRY", "لاندری"
-        CSSD = "CSSD", "CSSD"
+        LAUNDRY = "LAUNDRY", "لنژری"
+        CSSD = "CSR", "CSR"
         WAREHOUSE = "WAREHOUSE", "انبار خدمات"
         TRANSPORT = "TRANSPORT", "حمل و نقل"
 

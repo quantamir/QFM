@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+.venv/
+env/
+
+# VS Code
+.vscode/
+
+# Cursor
+.cursor/
+
+# Django
+*.log
+
+# OS
+Thumbs.db
+.DS_Store

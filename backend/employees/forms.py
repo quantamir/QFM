@@ -1,8 +1,9 @@
 from django import forms
-from dashboard.models import Employee
+from .models import Employee
 
 
 class EmployeeForm(forms.ModelForm):
+
     class Meta:
         model = Employee
 
@@ -11,13 +12,49 @@ class EmployeeForm(forms.ModelForm):
             "first_name",
             "last_name",
             "national_code",
-            "mobile",
-            "department",
-            "job_title",
-            "hire_date",
+            "phone",
+            "unit",
+            "employment_type",
             "is_active",
         ]
 
         widgets = {
-            "hire_date": forms.DateInput(attrs={"type": "date"}),
+
+            "personnel_code": forms.TextInput(attrs={
+                "class": "form-control",
+                "placeholder": "کد پرسنلی را وارد کنید"
+            }),
+
+            "first_name": forms.TextInput(attrs={
+                "class": "form-control",
+                "placeholder": "نام"
+            }),
+
+            "last_name": forms.TextInput(attrs={
+                "class": "form-control",
+                "placeholder": "نام خانوادگی"
+            }),
+
+            "national_code": forms.TextInput(attrs={
+                "class": "form-control",
+                "placeholder": "کد ملی"
+            }),
+
+            "phone": forms.TextInput(attrs={
+                "class": "form-control",
+                "placeholder": "شماره تماس"
+            }),
+
+            "unit": forms.Select(attrs={
+                "class": "form-select"
+            }),
+
+            "employment_type": forms.Select(attrs={
+                "class": "form-select"
+            }),
+
+            "is_active": forms.CheckboxInput(attrs={
+                "class": "form-check-input"
+            }),
+
         }

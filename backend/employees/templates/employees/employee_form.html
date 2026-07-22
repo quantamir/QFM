@@ -1,32 +1,114 @@
 {% extends "dashboard/base.html" %}
 
 {% block title %}
-افزودن پرسنل
+افزودن پرسنل | QFM
 {% endblock %}
 
 {% block content %}
 
 <div class="container mt-4">
 
-    <h2 class="mb-4">
-        افزودن پرسنل
-    </h2>
+    <div class="text-center mb-5">
 
-    <form method="post">
+        <h1 class="display-5 fw-bold text-primary">
 
-        {% csrf_token %}
+            👤 افزودن پرسنل
 
-        {{ form.as_p }}
+        </h1>
 
-        <button type="submit" class="btn btn-success">
-            ذخیره
-        </button>
+        <p class="text-muted fs-5">
 
-        <a href="/employees/" class="btn btn-secondary">
-            انصراف
-        </a>
+            ثبت اطلاعات پرسنل واحد خدمات مرکز درمانی سوده
 
-    </form>
+        </p>
+
+    </div>
+
+    <div class="qfm-card shadow-lg">
+
+        <div class="qfm-card-header">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <h4 class="mb-0 fw-bold">
+
+                    اطلاعات پرسنل
+
+                </h4>
+
+                <span class="badge bg-primary fs-6">
+
+                    QFM
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="card-body py-5 px-5">
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                <div class="row justify-content-center">
+
+                    {% for field in form %}
+
+                    <div class="col-lg-5 col-md-6 mb-4">
+
+                        <label class="form-label fw-bold">
+
+                            {{ field.label }}
+
+                        </label>
+
+                        {{ field }}
+
+                        {% if field.errors %}
+
+                        <div class="text-danger mt-2">
+
+                            {{ field.errors }}
+
+                        </div>
+
+                        {% endif %}
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+                <hr class="my-4">
+
+                <div class="d-flex justify-content-center gap-3">
+
+                    <button
+                        type="submit"
+                        class="btn btn-success px-5 py-2">
+
+                        💾 ذخیره اطلاعات
+
+                    </button>
+
+                    <a
+                        href="{% url 'employee_list' %}"
+                        class="btn btn-secondary px-5 py-2">
+
+                        ↩ بازگشت
+
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </div>
 

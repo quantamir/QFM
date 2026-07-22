@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
-from dashboard.models import Employee
+from .models import Employee
 from .forms import EmployeeForm
 
 
@@ -14,6 +14,22 @@ class EmployeeListView(LoginRequiredMixin, ListView):
     context_object_name = "employees"
     paginate_by = 20
     ordering = ["-id"]
+    
+    def get_context_data(self, **kwargs):
+
+    context = super().get_context_data(**kwargs)
+
+    context["total_employees"] = Employee.objects.count()
+
+    context["shift_employees"] = Employee.objects.filter(
+        employment_type="shift"
+    ).count()
+
+    context["fixed_employees"] = Employee.objects.filter(
+        employment_type="fixed"
+    ).count()
+
+    return context
 
 
 class EmployeeCreateView(LoginRequiredMixin, CreateView):

@@ -6,23 +6,37 @@
 
 {% block content %}
 
-<div class="d-flex justify-content-between align-items-center mb-4">
+<div class="card shadow-sm border-0 mb-4">
 
-    <div>
-        <h2 class="fw-bold">
-            داشبورد مدیریت خدمات
-        </h2>
+    <div class="card-body">
 
-        <p class="text-muted mb-0">
-            مرکز درمانی سوده
-        </p>
-    </div>
+        <div class="row align-items-center">
 
-    <div>
+            <div class="col-md-8">
 
-        <span class="badge bg-success fs-6">
-            سیستم فعال
-        </span>
+                <h2 class="fw-bold mb-2">
+                    🏥 داشبورد مدیریت خدمات
+                </h2>
+
+                <p class="text-muted mb-0">
+                    مرکز درمانی سوده | QFM
+                </p>
+
+            </div>
+
+            <div class="col-md-4 text-end">
+
+                <span class="badge bg-success fs-6 px-3 py-2">
+                    ✅ سیستم فعال
+                </span>
+
+                <div class="mt-3 text-muted">
+                    نسخه 1.0
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -33,5 +47,9 @@
 {% include "dashboard/components/quick_access.html" %}
 
 {% include "dashboard/components/today_status.html" %}
+
+{% include "dashboard/components/announcements.html" %}
+
+{% include "dashboard/components/dashboard_header.html" %}
 
 {% endblock %}
